@@ -16,12 +16,12 @@ source=("http://web.mit.edu/kerberos/dist/krb5/${pkgver%.*}/krb5-${pkgver}-signe
 md5sums=('357f1312b7720a0a591e22db0f7829fe')
 
 prepare() {
-	_check_pgpsig
+  _check_pgpsig
   tar xf krb5-${pkgver}.tar.gz
 }
 
 build() {
-	cd krb5-${pkgver}/src
+  cd krb5-${pkgver}/src
   export CFLAGS+=" -fPIC -fno-strict-aliasing -fstack-protector-all"
   export CPPFLAGS+=" -I/usr/include/et"
   ./configure --prefix=/usr \
@@ -55,7 +55,7 @@ check() {
 }
 
 package() {
-	cd krb5-${pkgver}/src
+  cd krb5-${pkgver}/src
   make DESTDIR="${pkgdir}" install
   install -Dm644 "${srcdir}"/krb5-${pkgver}/NOTICE "${pkgdir}"/usr/share/licenses/${pkgname}/LICENSE
   install -dm 755 "${pkgdir}"/usr/share/aclocal
