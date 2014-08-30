@@ -11,7 +11,6 @@ depends=('e2fsprogs' 'libldap' 'keyutils') # TODO: check this
 makedepends=('perl' 'python2')
 provides=('krb5')
 conflicts=('krb5')
-replaces=('krb5')
 source=("http://web.mit.edu/kerberos/dist/krb5/${pkgver%.*}/krb5-${pkgver}-signed.tar")
 md5sums=('357f1312b7720a0a591e22db0f7829fe')
 
