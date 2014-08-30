@@ -6,4 +6,4 @@ It is possible that there are packages that will break, open a issue if that’s
 
 # Why use this?
 
-Maybe you prefer to remove some never used binaries from the disk, but a more likely reason is that the krb5 package conflicts and prevents a nice install of the Heimdal Kerberos implementation.
+Maybe you prefer to remove some never used binaries from the disk, but a more likely reason is that the krb5 package conflicts and prevents a nice install of the Heimdal Kerberos implementation. For that, see my package `heimdal-krb-client`.
